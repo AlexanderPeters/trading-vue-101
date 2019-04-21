@@ -29,4 +29,7 @@ module.exports = {
             template: './src/index.html'
         })
     ],
+    devServer: {
+        port: 9000 // Change this before compiling with npm
+    }
 }
