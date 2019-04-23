@@ -11,6 +11,10 @@ export default {
             // TODO: Text wrapping for prev/next indicator labels 
             // when the chart is shrunk in the x direction
             //TODO: Debouncing on buttons needed?
+            //TODO: Absolute X position of cursor --Done
+            //TODO: Only run code on the first click inside of a box,
+            // and not everytime is updates if you are dragging the graph
+            // around from inside the box.
 
             const l = this.$props.layout
             const upperLeftCorner = { x : 0, y : 0 }
@@ -91,16 +95,16 @@ export default {
             ctx.textAlign = "center";
             ctx.fillText("Next Indicator", middleOfUpperRightCornerOffsetNext.x, middleOfUpperRightCornerOffsetNext.y);
 
-            //console.log("X: " + this.$props.cursor.x + " Y: " + this.$props.cursor.y)
+            //console.log("X: " + event.clientX + " Y: " + event.clientY)
             // Any mouse button clicked?
             if(this.$props.cursor.locked) {
                 // Cursor within prev indicator box?
-                if(this.$props.cursor.x >= upperRightCornerOffsetPrev.x && this.$props.cursor.x <= upperRightCornerOffsetNext.x && 
+                if(event.clientX >= upperRightCornerOffsetPrev.x && event.clientX <= upperRightCornerOffsetNext.x && 
                     this.$props.cursor.y >= upperRightCorner.y && this.$props.cursor.y <= upperRightCornerOffsetPrev.y) {
                         this.previousIndicator()
                 }
                 // Cursor within next indicator box?
-                if(this.$props.cursor.x >= upperRightCornerOffsetNext.x && this.$props.cursor.x <= upperRightCorner.x && 
+                if(event.clientX >= upperRightCornerOffsetNext.x && event.clientX <= upperRightCorner.x && 
                     this.$props.cursor.y >= upperRightCorner.y && this.$props.cursor.y <= upperRightCornerOffsetNext.y) {
                         this.nextIndicator()
                 }
