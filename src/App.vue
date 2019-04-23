@@ -33,6 +33,7 @@ import TradingVue from 'trading-vue-js'
 import Data from '../data/data.json'
 // Import Overlays
 //import Grin from './Grin.js'
+import Next_Indicator from './Next_Indicator.js'
 
 export default {
     name: 'app',
@@ -46,7 +47,8 @@ export default {
         }
     },
     created() {
-        //this.overlays = [Grin]
+        //this.overlays = [Grin, Next_Indicator]
+        this.overlays = [Next_Indicator]
     },
     mounted() {
         window.addEventListener('resize', this.onResize)
@@ -56,7 +58,7 @@ export default {
     },
     data() {
         return {
-            id: "0",
+            id: "0", // Probably unescessary.
             titleTxt: "Example Plot",
             chart: Data,
             width: window.innerWidth,
@@ -74,8 +76,8 @@ export default {
                 colorWickUp: '#00A399',
                 colorWickDw: '#FF5652',
                 colorWickSm: "181D26", // What does this do?
-                colorVolUp: '#132825',
-                colorVolDw: '#281F27'
+                colorVolUp: '#004d1a',
+                colorVolDw: '#4d0000'
             },
             font: "bold 13px sans-serif"
             // Overlay update needed?

@@ -1,0 +1,43 @@
+{
+    "offchart": [
+        {
+            "name": "RSI, 20",
+            "type": "RSI",
+            "data": [
+                    [],
+                    [],
+                    []
+            ],
+            "settings": {
+                "upper": 70,
+                "lower": 30
+            }
+        },
+        {
+            "name": "RSI, 30",
+            "type": "RSI",
+            "data": [
+                    [],
+                    [],
+                    []
+            ],
+            "settings": {
+                "upper": 70,
+                "lower": 30
+            }
+        },
+        {
+            "name": "RSI, 40",
+            "type": "RSI",
+            "data": [
+                    [],
+                    [],
+                    []
+            ],
+            "settings": {
+                "upper": 70,
+                "lower": 30
+            }
+        }
+    ]
+}

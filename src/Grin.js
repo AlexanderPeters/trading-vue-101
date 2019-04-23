@@ -29,7 +29,7 @@ export default {
             const c = { x : l.width / 2, y : l.height / 2 }
             ctx.lineWidth = 1
             ctx.strokeStyle = 'gray'
-            ctx.fillStyle = '#ffea03'
+            ctx.fillStyle = '#F9F9F9'
             ctx.beginPath()
             ctx.arc(c.x, c.y, 50, 0, Math.PI * 2, true) // Outer circle
             ctx.fill()
@@ -39,7 +39,7 @@ export default {
             ctx.moveTo(c.x + 35, c.y)
             ctx.arc(c.x, c.y, 35, 0, Math.PI , false)  // Mouth (clockwise)
             ctx.moveTo(c.x - 10, c.y - 10)
-            ctx.fillStyle = '#ffea03'
+            ctx.fillStyle = '#F9F9F9'
             ctx.arc(c.x - 15, c.y - 10, 5, 0, Math.PI * 2, true)  // Left eye
             ctx.fill()
             ctx.moveTo(c.x + 20, c.y - 10)
@@ -56,7 +56,7 @@ export default {
         // just create a new overlay with the same type:
         // e.g. use_for() { return ['EMA'] }.
         use_for() { return ['GRIN'] },
-        data_colors() { return ['yellow'] }
+        data_colors() { return ['F9F9F9'] }
     },
     data() {
         // Define internal setting & constants here

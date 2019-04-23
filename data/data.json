@@ -6745,6 +6745,14 @@
             }
         },
         {
+            "name": "Next_Indicator, The magical indicator switching overlay.",
+            "type": "Next_Indicator",
+            "data": [],
+            "settings": {
+                "z-index": 11
+            }
+        },
+        {
             "name": "Trades",
             "type": "PerfectTrades",
             "data": [
